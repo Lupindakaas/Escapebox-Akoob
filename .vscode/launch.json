@@ -6,7 +6,7 @@
     "configurations": [
         {
             "name": "(Windows) Launch",
-            "type": "cppvsdbg",
+            "type": "cpp",
             "request": "launch",
             "program": "enter program name, for example ${workspaceFolder}/a.exe",
             "args": [],

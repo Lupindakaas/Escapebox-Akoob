@@ -1,0 +1,21 @@
+----------- sleutel systeem-----------
+	2 elektronische sleutelsloten
+	2 2 bit seven segment displays
+	1 matrix geschakeld getalinvoer paneel
+	1 resetknop
+	1 arduino nano
+	
+----------- klok systeem 1 --------------
+	1 momentary drukschakelaar
+	1 kloksysteem
+	2 kabelinputs
+	1 groene led
+	1 rode led
+	1 resetknop
+	1 arduino uno
+
+----------- klok systeem 2 --------------
+	1 ladeslot
+	1 matrix geschakeld getalinvoer paneel
+	1 resetknop
+	1 arduino nano

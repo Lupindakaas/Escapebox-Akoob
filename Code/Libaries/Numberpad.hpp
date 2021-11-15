@@ -1,19 +1,30 @@
 class Numberpad
 {
 private:
-    uint8_t rows = 0;
-    uint8_t columns = 0;
-    int[rows-1] rowPins;
-    int[columns-1] columnPins;
+    uint8_t ROWS = 3;
+    uint8_t COLUMNS = 4;
+    uint8_t rowPins[10];
+    uint8_t columnPins[10];
 public:
-    Numberpad(int[10] rows, int[10] columns);
-    Init();
-    Read();
+    Numberpad(int rows[10], int columns[10]);
+    void Init();
+    void Read();
     ~Numberpad();
 };
 
-Numberpad::Numberpad(int[5] rows, int[5] columns)
+
+//--------------------------------------------------------------------------------//
+//                                      Source                                    //
+//--------------------------------------------------------------------------------//
+
+
+Numberpad::Numberpad(int amountOfRows, int amountOfColumns)
 {
+    for (uint8_t i = 0; i < ROWS & ROWS[i] != -1; i++)
+    {
+        rowPins[i] = rows[i];
+    }
+    
 }
 
 Numberpad::~Numberpad()

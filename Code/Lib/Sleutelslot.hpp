@@ -14,6 +14,7 @@ public:
 
 Sleutelslot::Sleutelslot(uint8_t pin) {
 	PIN = pin;
+	pinMode(PIN, OUTPUT);
 	vanSlotAf();
 }
 

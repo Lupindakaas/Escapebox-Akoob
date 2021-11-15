@@ -1,12 +1,11 @@
 class Sleutelslot {
 private:
-    uint8_t value; //0 = vrij, 1 = op slot
+    uint8_t waarde; //0 = vrij, 1 = op slot
 	uint8_t PIN; // De pin waar het slot op aangesloten zit.
 public:
     Sleutelslot(uint8_t pin);
     ~Sleutelslot();
-	void doeOpSlot();
-	void vanSlotAf();
+	void leesAf();
 	uint8_t OpSlot();
 };
 
@@ -14,7 +13,7 @@ public:
 
 Sleutelslot::Sleutelslot(uint8_t pin) {
 	PIN = pin;
-	pinMode(PIN, OUTPUT);
+	pinMode(PIN, INPUT);
 	vanSlotAf();
 }
 
@@ -22,17 +21,13 @@ Sleutelslot::~Sleutelslot() {
 	vanSlotAf();
 }
 
-void Sleutelslot::doeOpSlot(){
-	value = 1;
-	digitalWrite(PIN,  HIGH);
+void Sleutelslot::leesAf() {
+
+	waarde = digitalRead(PIN);
 
 }
 
-void Sleutelslot::vanSlotAf(){
-	value = 0;
-	digitalWrite(PIN,  LOW);
-}
-
-uint8_t Sleutelslot::OpSlot(){
-	return value;
+bool Sleutelslot::status() {
+    leesAf();
+    return waarde;
 }

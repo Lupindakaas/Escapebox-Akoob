@@ -1,4 +1,5 @@
-class Sleutelslot{
+class Sleutelslot
+{
 private:
 	uint8_t waarde; //0 = vrij, 1 = op slot
 	uint8_t PIN;	// De pin waar het slot op aangesloten zit.

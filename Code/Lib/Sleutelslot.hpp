@@ -7,8 +7,10 @@ public:
     ~Sleutelslot();
 	void doeOpSlot();
 	void vanSlotAf();
-	void OpSlot();
+	uint8_t OpSlot();
 };
+
+//---------------Source code----------------//
 
 Sleutelslot::Sleutelslot(uint8_t pin) {
 	PIN = pin;
@@ -28,4 +30,8 @@ void Sleutelslot::doeOpSlot(){
 void Sleutelslot::vanSlotAf(){
 	value = 0;
 	digitalWrite(PIN,  LOW);
+}
+
+uint8_t Sleutelslot::OpSlot(){
+	return value;
 }

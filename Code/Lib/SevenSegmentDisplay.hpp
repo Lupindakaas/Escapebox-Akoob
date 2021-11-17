@@ -1,8 +1,11 @@
+#include "SevSeg.h"
+
 class SevenSegmentDisplay
 {
 private:
 	int waarde; //0 = vrij, 1 = op slot
 	uint8_t PINS[8];	// De pin waar het slot op aangesloten zit.
+	sevseg display;
 public:
 	SevenSegmentDisplay(uint8_t pin);
 	~SevenSegmentDisplay();
@@ -13,7 +16,7 @@ public:
 
 SevenSegmentDisplay::SevenSegmentDisplay(uint8_t pins[8]){
 	PINS = pins;
-	
+
 }
 
 int SevenSegmentDisplay::geefWaarde(){

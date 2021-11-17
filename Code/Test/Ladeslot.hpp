@@ -1,6 +1,6 @@
 class Ladeslot {
 private:
-    uint8_t value; //0 = vrij, 1 = op slot
+  uint8_t value; //0 = vrij, 1 = op slot
 	uint8_t PIN; // De pin waar het slot op aangesloten zit.
 public:
     Ladeslot(uint8_t pin);
@@ -24,14 +24,14 @@ Ladeslot::~Ladeslot() {
 }
 
 void Ladeslot::doeOpSlot(){
-	value = 1;
-	digitalWrite(PIN,  HIGH);
+	value = 0;
+	digitalWrite(PIN,  LOW);
 
 }
 
 void Ladeslot::vanSlotAf(){
-	value = 0;
-	digitalWrite(PIN,  LOW);
+	value = 1;
+	digitalWrite(PIN,  HIGH);
 }
 
 uint8_t Ladeslot::OpSlot(){

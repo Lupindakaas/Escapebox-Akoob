@@ -13,8 +13,8 @@ public:
 Drukschakelaar::Drukschakelaar(uint_8t pin) {
     PIN = pin;
     pinMode(PIN, INPUT);
-
 }
+
 Drukschakelaar::~Drukschakelaar() {
 
 }
